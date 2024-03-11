@@ -1,0 +1,126 @@
+body {
+    font-family: Arial;
+    background-image: url('https://i.ibb.co/ygdWkPz/a9dc5e60-8dac-41e8-98bd-2ea48ee0bea6.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+  
+  .background-blur {
+    filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .form-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .formulario {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 680px;
+    padding: 44px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    background-color: #f5f4f4;
+    text-align: left;
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+  }
+  
+  input[type="submit"] {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 10px auto;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 10px;
+  }
+  
+  .bmo-container {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    animation: bmoAnimation 10s ease-in-out infinite;
+  }
+  
+  .bmo {
+    display: inline-block;
+    animation: bmoBounce 10s ease-in-out infinite;
+    transform: scaleX(-1);
+  }
+  
+  @keyframes bmoAnimation {
+    0% {
+      transform: translateX(85%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    51% {
+      transform: translateX(-90%) rotateY(180deg);
+    }
+    100% {
+      transform: translateX(0%) rotateY(180deg);
+    }
+  }
+  
+  @keyframes bmoBounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #limpiar {
+    background-color:#ff8a8a;
+    ;
+    color: rgb(255, 255, 255);
+}
+
+#division {
+    background-color: #5d6dff;
+    color: rgb(0, 0, 0);
+}
+#multiplicacion {
+    background-color: #59bb59;
+    color: rgb(0, 0, 0);
+}
+#suma {
+    background-color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
+}
+#resta {
+    background-color: rgb(123, 255, 255);
+    color: rgb(0, 0, 0);
+}

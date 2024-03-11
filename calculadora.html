@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Login ZOOHIBERUS</title>
+</head>
+<body style="background-color:white; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0;">
+    <header>
+        <figure><br><br><br><br><br><br>
+            <img src="https://i.ibb.co/1ZqQytc/2179b456-e172-4839-99c4-9fe83638568a.png" height="200" width=240/>
+        </figure>
+        <h1><div id="resultado"></div></h1>
+    </header>
+    <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1;">
+        <div class="formulario" style="margin: 50px 0; display: flex; justify-content: center; align-items: center;">
+            <H2 style="text-align: center";>CALCULADORA BMO</H2>
+            <form style="display: flex; flex-direction: column; width: 100%;">
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                    <input type="text" id="caja1" name="caja1" style="flex: 1; margin-right: 10px;">
+                    <input type="text" id="caja2" name="caja2" style="flex: 1; margin-left: 10px;">
+                </div>
+                <div style="display: flex; justify-content: space-between; width: 100%;">
+                    <input type="button" id="suma" value="" style="width: 160px; height: 30px;">
+                    <input type="button" id="resta" value="" style="width: 160px; height: 30px;">
+                    <input type="button" id="multiplicacion" value="" style="width: 160px; height: 30px;">
+                    <input type="button" id="division" value="" style="width: 160px; height: 30px;">
+                    <input type="button" id="limpiar" value="" style="width: 160px; height: 30px;">
+                </div>
+                <br>
+                <div class="bmo-container">
+                    <img class="bmo" src="https://i.gifer.com/4FB4.gif" height="70" width="70" onmouseover="window.alert('Soy BMO');">
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+const sumar = document.getElementById("suma");
+suma.addEventListener("click", (event) => {
+    event.preventDefault();
+    const valor1 = parseFloat(document.getElementById("caja1").value);
+    const valor2 = parseFloat(document.getElementById("caja2").value);
+    const resultado = document.getElementById("resultado");
+    if (isNaN(valor1) || isNaN(valor2)) {
+        resultado.textContent = "";
+    } else if (valor1 === 0 || valor2 === 0) {
+        resultado.textContent = "No se puede dividir por cero";
+    } else {
+        const suma = valor1 + valor2;
+        resultado.textContent = `BMO ha sumado: ${suma}`;
+    }
+});
+const resta = document.getElementById("resta");
+resta.addEventListener("click", (event) => {
+    event.preventDefault();
+    const valor1 = parseFloat(document.getElementById("caja1").value);
+    const valor2 = parseFloat(document.getElementById("caja2").value);
+    const resultado = document.getElementById("resultado");
+    if (isNaN(valor1) || isNaN(valor2)) {
+        resultado.textContent = "";
+    } else if (valor1 === 0 || valor2 === 0) {
+        resultado.textContent = "No se puede dividir por cero";
+    } else {
+        const resta = valor1 - valor2;
+        resultado.textContent = `BMO ha restado: ${resta}`;
+    }
+});
+const multiplicacion = document.getElementById("multiplicacion");
+multiplicacion.addEventListener("click", (event) => {
+    event.preventDefault();
+    const valor1 = parseFloat(document.getElementById("caja1").value);
+    const valor2 = parseFloat(document.getElementById("caja2").value);
+    const resultado = document.getElementById("resultado");
+    if (isNaN(valor1) || isNaN(valor2)) {
+        resultado.textContent = "";
+    } else if (valor1 === 0 || valor2 === 0) {
+        resultado.textContent = "No se puede dividir por cero";
+    } else {
+        const multiplicacion = valor1 * valor2;
+        resultado.textContent = `BMO ha multiplicado: ${multiplicacion}`;
+    }
+});
+const dividir = document.getElementById("division");
+division.addEventListener("click", (event) => {
+    event.preventDefault();
+    const valor1 = parseFloat(document.getElementById("caja1").value);
+    const valor2 = parseFloat(document.getElementById("caja2").value);
+    const resultado = document.getElementById("resultado");
+    if (isNaN(valor1) || isNaN(valor2)) {
+        resultado.textContent = "";
+    } else if (valor1 === 0 || valor2 === 0) {
+        resultado.textContent = "No se puede dividir por cero";
+    } else {
+        const division = valor1 / valor2;
+        resultado.textContent = `BMO ha dividido: ${division}`;
+    }
+});
+
+const limpiar = document.getElementById("limpiar");
+limpiar.addEventListener("click", () => {
+    document.getElementById("caja1").value = "";
+    document.getElementById("caja2").value = "";
+    document.getElementById("resultado").textContent = "";
+});
+</script>
+
